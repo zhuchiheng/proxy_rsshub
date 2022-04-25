@@ -23,11 +23,17 @@ Python
 定时抓取 RSSHub 站点内容并缓存在 GitHub 库中，RSSHub 实例故障或被源站屏蔽时也不需要更换阅读器中的地址；
 
 应用简介
+
 核心功能为 Python 实现，使用 GitHub Actions 定时触发；
+
 需要编辑config.json添加订阅规则，执行时依次向所设置的 RSSHub 站点请求相应规则；
+
 抓取成为后会保存在 xml 文件夹中，对应的链接地址自动更新至README.md中；
+
 将匹配如下模式并自动替换——---start---(.|\n)*?---end---；
+
 proxy_rsshub/.github/workflows/index.yml 内可设置执行间隔；【【对于 RSS 来说 6 小时已经很合理了吧】】
+
 官方网站 && 应用商店地址
 wdssmq/proxy_rsshub: 使用 GitHub Actions 反代 RSSHub + 多实例轮询：
 
